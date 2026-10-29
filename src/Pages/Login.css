@@ -1,0 +1,143 @@
+/* Login.css
+   Reuses --brand, --brand-dark and --text from Navbar.css. */
+
+.login-page {
+  display: grid;
+  place-items: start center;
+  min-height: calc(100vh - 70px);
+  padding: 3rem 5%;
+  font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  color: var(--text, #2b2b2b);
+}
+
+.login-card {
+  width: min(100%, 26rem);
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid #e6e1de;
+  border-radius: 1.25rem;
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.login-sub {
+  margin: 0.4rem 0 1.5rem;
+  color: #6b6b6b;
+}
+
+/* Log in / Sign up switch */
+.login-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem;
+  margin-bottom: 1.25rem;
+  padding: 0.25rem;
+  background: #f6f2f0;
+  border-radius: 999px;
+}
+
+.login-tabs button {
+  padding: 0.55rem;
+  font: inherit;
+  font-weight: 600;
+  color: #6b6b6b;
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.login-tabs button.active {
+  color: var(--text, #2b2b2b);
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form */
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.login-card label {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  font: inherit;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #d9d2ce;
+  border-radius: 0.6rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: var(--brand, #ff5a3c);
+  box-shadow: 0 0 0 3px rgba(255, 90, 60, 0.2);
+}
+
+.login-error {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  color: var(--brand-dark, #e64526);
+}
+
+.login-submit {
+  margin-top: 1.1rem;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: var(--brand, #ff5a3c);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-submit:hover:not(:disabled) {
+  background: var(--brand-dark, #e64526);
+}
+
+.login-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.login-warning {
+  margin: 1.25rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #8a8a8a;
+}
+
+.login-tabs button:focus-visible,
+.login-submit:focus-visible {
+  outline: 3px solid var(--text, #2b2b2b);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-tabs button,
+  .login-card input,
+  .login-submit {
+    transition: none;
+  }
+}

@@ -1,0 +1,243 @@
+/* Checkout.css
+   Reuses --brand, --brand-dark and --text from Navbar.css. */
+
+.checkout-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 5% 4rem;
+  font-family: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  color: var(--text, #2b2b2b);
+}
+
+.checkout-page h1 {
+  margin: 0 0 2rem;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Layout ---------- */
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 21rem;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ---------- Form ---------- */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.checkout-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e6e1de;
+  border-radius: 1rem;
+}
+
+.checkout-form legend {
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.checkout-form label {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="tel"],
+.checkout-form textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  font: inherit;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #d9d2ce;
+  border-radius: 0.6rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.checkout-form textarea {
+  resize: vertical;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  outline: none;
+  border-color: var(--brand, #ff5a3c);
+  box-shadow: 0 0 0 3px rgba(255, 90, 60, 0.2);
+}
+
+/* Payment options */
+.checkout-form .pay-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+  padding: 0.8rem 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #d9d2ce;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.pay-option input {
+  accent-color: var(--brand, #ff5a3c);
+}
+
+.pay-option.disabled {
+  color: #9a9a9a;
+  background: #faf8f7;
+  cursor: not-allowed;
+}
+
+.checkout-error {
+  margin: 0;
+  color: var(--brand-dark, #e64526);
+}
+
+.checkout-submit {
+  padding: 0.95rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: var(--brand, #ff5a3c);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.checkout-submit:hover:not(:disabled) {
+  background: var(--brand-dark, #e64526);
+}
+
+.checkout-submit:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+/* ---------- Summary ---------- */
+.checkout-summary {
+  position: sticky;
+  top: 90px; /* clears the 70px sticky navbar */
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e6e1de;
+  border-radius: 1rem;
+}
+
+.checkout-summary h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.checkout-summary ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0 0 1rem;
+  padding: 0 0 1rem;
+  list-style: none;
+  border-bottom: 1px solid #efeae7;
+}
+
+.checkout-summary li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #4a4a4a;
+}
+
+.checkout-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.checkout-total strong {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.checkout-edit {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6b6b6b;
+}
+
+.checkout-edit:hover {
+  color: var(--brand-dark, #e64526);
+}
+
+/* ---------- Confirmation / empty ---------- */
+.checkout-message {
+  text-align: center;
+}
+
+.checkout-message p {
+  margin: 0;
+  color: #6b6b6b;
+}
+
+.checkout-link {
+  display: block;
+  width: fit-content;
+  margin: 1.75rem auto 0;
+  padding: 0.75rem 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: var(--brand, #ff5a3c);
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.checkout-link:hover {
+  background: var(--brand-dark, #e64526);
+}
+
+/* ---------- Keyboard focus ---------- */
+.checkout-page a:focus-visible,
+.checkout-page button:focus-visible {
+  outline: 3px solid var(--text, #2b2b2b);
+  outline-offset: 2px;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 820px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Summary first on small screens, so people see what they're paying for */
+  .checkout-summary {
+    position: static;
+    order: -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .checkout-form input,
+  .checkout-form textarea,
+  .checkout-submit,
+  .checkout-link {
+    transition: none;
+  }
+}

@@ -1,0 +1,260 @@
+/* Hero.css
+   Reuses --brand, --brand-dark, --text from Navbar.css.
+   Optional: add this to index.html for the headline font:
+   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&display=swap" rel="stylesheet">
+*/
+
+.hero {
+  --hero-font: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --muted: #6b6b6b;
+  --line: #e6e1de;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: stretch;
+  min-height: calc(100vh - 70px);
+  font-family: var(--hero-font);
+  color: var(--text, #2b2b2b);
+}
+
+/* ---------- Left: copy + search ---------- */
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 5%;
+  max-width: 44rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.hero-sub {
+  margin: 1.25rem 0 2rem;
+  max-width: 34ch;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.hero-search {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.4rem;
+  background: #fff;
+  border: 2px solid var(--text, #2b2b2b);
+  border-radius: 999px;
+  max-width: 34rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.hero-search:focus-within {
+  box-shadow: 0 0 0 4px rgba(255, 90, 60, 0.25);
+}
+
+.hero-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 1.1rem;
+  font: inherit;
+  font-size: 1rem;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.hero-search input::placeholder {
+  color: #8a8a8a;
+}
+
+.hero-search button {
+  padding: 0.7rem 1.6rem;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: var(--brand, #ff5a3c);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.hero-search button:hover {
+  background: var(--brand-dark, #e64526);
+  transform: translateY(-1px);
+}
+
+.hero-search button:focus-visible {
+  outline: 3px solid var(--text, #2b2b2b);
+  outline-offset: 2px;
+}
+
+/* Category quick links */
+.hero-cuisines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-cuisines a {
+  display: block;
+  padding: 0.45rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text, #2b2b2b);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hero-cuisines a:hover,
+.hero-cuisines a:focus-visible {
+  color: var(--brand, #ff5a3c);
+  border-color: var(--brand, #ff5a3c);
+}
+
+.hero-cuisines a:focus-visible {
+  outline: 2px solid var(--brand, #ff5a3c);
+  outline-offset: 2px;
+}
+
+/* ---------- Right: brand panel + live tracker ---------- */
+.hero-panel {
+  display: grid;
+  place-items: center;
+  padding: 3rem 2rem;
+  background: var(--brand, #ff5a3c);
+  border-radius: 2.5rem 0 0 2.5rem;
+}
+
+.tracker {
+  width: min(100%, 22rem);
+  padding: 1.75rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 48px rgba(120, 30, 10, 0.25);
+}
+
+.tracker-eta {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.tracker-label {
+  margin: 0.4rem 0 1.5rem;
+  color: var(--muted);
+}
+
+.tracker-bar {
+  height: 8px;
+  background: #f1ecea;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.tracker-fill {
+  display: block;
+  height: 100%;
+  width: var(--progress, 0%);
+  background: var(--brand, #ff5a3c);
+  border-radius: 999px;
+  /* The one entrance moment on the page */
+  animation: fill 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+@keyframes fill {
+  from {
+    width: 0;
+  }
+}
+
+.tracker-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.78rem;
+  color: #9a9a9a;
+}
+
+.tracker-steps li.done {
+  color: var(--text, #2b2b2b);
+}
+
+.tracker-steps li.current {
+  color: var(--brand-dark, #e64526);
+  font-weight: 700;
+}
+
+/* Visually hidden, still read by screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-copy {
+    padding: 3rem 5% 2.5rem;
+    max-width: none;
+  }
+
+  .hero-panel {
+    padding: 2.5rem 5%;
+    border-radius: 2rem 2rem 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-search {
+    flex-direction: column;
+    border-radius: 1.5rem;
+  }
+
+  .hero-search button {
+    padding: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tracker-fill {
+    animation: none;
+  }
+
+  .hero-search button,
+  .hero-search button:hover {
+    transition: none;
+    transform: none;
+  }
+}

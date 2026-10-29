@@ -1,0 +1,411 @@
+{
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "Slice Society",
+      "cuisine": "Pizza",
+      "rating": 4.6,
+      "deliveryTime": 25,
+      "deliveryFee": 10,
+      "image": "/images/slice-society.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Grill House",
+      "cuisine": "Burgers",
+      "rating": 4.4,
+      "deliveryTime": 30,
+      "deliveryFee": 8,
+      "image": "/images/grill-house.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Rice & Co",
+      "cuisine": "Rice bowls",
+      "rating": 4.7,
+      "deliveryTime": 20,
+      "deliveryFee": 12,
+      "image": "/images/rice-co.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Sweet Spot",
+      "cuisine": "Desserts",
+      "rating": 4.5,
+      "deliveryTime": 35,
+      "deliveryFee": 6,
+      "image": "/images/sweet-spot.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Crispy Coop",
+      "cuisine": "Chicken",
+      "rating": 4.3,
+      "deliveryTime": 25,
+      "deliveryFee": 8,
+      "image": "/images/crispy-coop.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Green Bowl",
+      "cuisine": "Salads",
+      "rating": 4.5,
+      "deliveryTime": 15,
+      "deliveryFee": 7,
+      "image": "/images/green-bowl.jpg"
+    },
+    {
+      "id": "7",
+      "name": "Tokyo Table",
+      "cuisine": "Sushi",
+      "rating": 4.8,
+      "deliveryTime": 40,
+      "deliveryFee": 15,
+      "image": "/images/tokyo-table.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Pasta Corner",
+      "cuisine": "Pasta",
+      "rating": 4.4,
+      "deliveryTime": 30,
+      "deliveryFee": 10,
+      "image": "/images/pasta-corner.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Morning Plate",
+      "cuisine": "Breakfast",
+      "rating": 4.2,
+      "deliveryTime": 20,
+      "deliveryFee": 6,
+      "image": "/images/morning-plate.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Shawarma Stop",
+      "cuisine": "Shawarma",
+      "rating": 4.6,
+      "deliveryTime": 20,
+      "deliveryFee": 7,
+      "image": "/images/shawarma-stop.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Ocean Catch",
+      "cuisine": "Seafood",
+      "rating": 4.5,
+      "deliveryTime": 35,
+      "deliveryFee": 14,
+      "image": "/images/ocean-catch.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Juice Lab",
+      "cuisine": "Drinks",
+      "rating": 4.3,
+      "deliveryTime": 15,
+      "deliveryFee": 5,
+      "image": "/images/juice-lab.jpg"
+    }
+  ],
+  "menu": [
+    {
+      "id": "1",
+      "restaurantId": 1,
+      "name": "Margherita",
+      "price": 70,
+      "image": "/images/margherita.jpg"
+    },
+    {
+      "id": "2",
+      "restaurantId": 1,
+      "name": "Pepperoni",
+      "price": 85,
+      "image": "/images/pepperoni.jpg"
+    },
+    {
+      "id": "3",
+      "restaurantId": 2,
+      "name": "Classic Cheeseburger",
+      "price": 60,
+      "image": "/images/classic-cheeseburger.jpg"
+    },
+    {
+      "id": "4",
+      "restaurantId": 2,
+      "name": "Crispy Chicken Burger",
+      "price": 65,
+      "image": "/images/crispy-chicken-burger.jpg"
+    },
+    {
+      "id": "5",
+      "restaurantId": 3,
+      "name": "Chicken Rice Bowl",
+      "price": 55,
+      "image": "/images/chicken-rice-bowl.jpg"
+    },
+    {
+      "id": "6",
+      "restaurantId": 3,
+      "name": "Veggie Rice Bowl",
+      "price": 45,
+      "image": "/images/veggie-rice-bowl.jpg"
+    },
+    {
+      "id": "7",
+      "restaurantId": 4,
+      "name": "Chocolate Cake Slice",
+      "price": 30,
+      "image": "/images/chocolate-cake-slice.jpg"
+    },
+    {
+      "id": "8",
+      "restaurantId": 4,
+      "name": "Vanilla Ice Cream Cup",
+      "price": 20,
+      "image": "/images/vanilla-ice-cream-cup.jpg"
+    },
+    {
+      "id": "9",
+      "restaurantId": 5,
+      "name": "Fried Chicken Bucket",
+      "price": 120,
+      "image": "/images/fried-chicken-bucket.jpg"
+    },
+    {
+      "id": "10",
+      "restaurantId": 5,
+      "name": "Spicy Wings (8 pcs)",
+      "price": 65,
+      "image": "/images/spicy-wings-8-pcs.jpg"
+    },
+    {
+      "id": "11",
+      "restaurantId": 6,
+      "name": "Caesar Salad",
+      "price": 50,
+      "image": "/images/caesar-salad.jpg"
+    },
+    {
+      "id": "12",
+      "restaurantId": 6,
+      "name": "Avocado Garden Salad",
+      "price": 55,
+      "image": "/images/avocado-garden-salad.jpg"
+    },
+    {
+      "id": "13",
+      "restaurantId": 7,
+      "name": "Salmon Nigiri Set",
+      "price": 110,
+      "image": "/images/salmon-nigiri-set.jpg"
+    },
+    {
+      "id": "14",
+      "restaurantId": 7,
+      "name": "California Roll (8 pcs)",
+      "price": 80,
+      "image": "/images/california-roll-8-pcs.jpg"
+    },
+    {
+      "id": "15",
+      "restaurantId": 8,
+      "name": "Spaghetti Bolognese",
+      "price": 65,
+      "image": "/images/spaghetti-bolognese.jpg"
+    },
+    {
+      "id": "16",
+      "restaurantId": 8,
+      "name": "Creamy Chicken Alfredo",
+      "price": 75,
+      "image": "/images/creamy-chicken-alfredo.jpg"
+    },
+    {
+      "id": "17",
+      "restaurantId": 9,
+      "name": "Full English Breakfast",
+      "price": 60,
+      "image": "/images/full-english-breakfast.jpg"
+    },
+    {
+      "id": "18",
+      "restaurantId": 9,
+      "name": "Pancake Stack",
+      "price": 40,
+      "image": "/images/pancake-stack.jpg"
+    },
+    {
+      "id": "19",
+      "restaurantId": 10,
+      "name": "Chicken Shawarma Wrap",
+      "price": 45,
+      "image": "/images/chicken-shawarma-wrap.jpg"
+    },
+    {
+      "id": "20",
+      "restaurantId": 10,
+      "name": "Beef Shawarma Plate",
+      "price": 70,
+      "image": "/images/beef-shawarma-plate.jpg"
+    },
+    {
+      "id": "21",
+      "restaurantId": 11,
+      "name": "Grilled Tilapia & Chips",
+      "price": 90,
+      "image": "/images/grilled-tilapia-chips.jpg"
+    },
+    {
+      "id": "22",
+      "restaurantId": 11,
+      "name": "Garlic Butter Shrimp",
+      "price": 105,
+      "image": "/images/garlic-butter-shrimp.jpg"
+    },
+    {
+      "id": "23",
+      "restaurantId": 12,
+      "name": "Pineapple Ginger Juice",
+      "price": 25,
+      "image": "/images/pineapple-ginger-juice.jpg"
+    },
+    {
+      "id": "24",
+      "restaurantId": 12,
+      "name": "Strawberry Smoothie",
+      "price": 35,
+      "image": "/images/strawberry-smoothie.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "customer": {
+        "name": "Daniel Osae",
+        "phone": "0256233666",
+        "address": "Tema",
+        "notes": "hdhd"
+      },
+      "items": [
+        {
+          "id": 13,
+          "name": "Beef Tacos (3 pcs)",
+          "price": 55,
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "name": "Pepperoni Pizza",
+          "price": 80,
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "name": "Margherita Pizza",
+          "price": 70,
+          "quantity": 2
+        },
+        {
+          "id": 7,
+          "name": "Hot Dog",
+          "price": 35,
+          "quantity": 1
+        },
+        {
+          "id": "34",
+          "name": "Wall Clock",
+          "price": 120,
+          "quantity": 1
+        },
+        {
+          "id": "1",
+          "name": "Running Shoes",
+          "price": 250,
+          "quantity": 1
+        },
+        {
+          "id": "9",
+          "name": "Fried Chicken Bucket",
+          "price": 120,
+          "quantity": 1
+        }
+      ],
+      "total": 935,
+      "paymentMethod": "Pay on delivery",
+      "status": "Delivered",
+      "createdAt": "2026-10-29T18:15:46.366Z",
+      "id": "-d-Prsx9ONY"
+    },
+    {
+      "customer": {
+        "name": "Daniel Osae",
+        "phone": "0256233666",
+        "address": "Tema",
+        "notes": "I'm not hungry"
+      },
+      "items": [
+        {
+          "id": "23",
+          "name": "Pineapple Ginger Juice",
+          "price": 25,
+          "quantity": 1
+        },
+        {
+          "id": "24",
+          "name": "Strawberry Smoothie",
+          "price": 35,
+          "quantity": 1
+        }
+      ],
+      "total": 60,
+      "paymentMethod": "Pay on delivery",
+      "status": "Confirmed",
+      "createdAt": "2026-10-29T18:29:35.911Z",
+      "id": "n5sckuy1Tmk"
+    },
+    {
+      "userId": "mJOK2vYb0rc",
+      "customer": {
+        "name": "Daniel Osae",
+        "phone": "0256233666",
+        "address": "Tema",
+        "notes": "qw"
+      },
+      "items": [
+        {
+          "id": "7",
+          "name": "Chocolate Cake Slice",
+          "price": 30,
+          "quantity": 1
+        },
+        {
+          "id": "8",
+          "name": "Vanilla Ice Cream Cup",
+          "price": 20,
+          "quantity": 1
+        },
+        {
+          "id": "13",
+          "name": "Salmon Nigiri Set",
+          "price": 110,
+          "quantity": 1
+        }
+      ],
+      "total": 160,
+      "paymentMethod": "Pay on delivery",
+      "status": "Confirmed",
+      "createdAt": "2026-10-29T19:12:46.840Z",
+      "id": "x4Dsb55MyPM"
+    }
+  ],
+  "users": [
+    {
+      "name": "Daniel Osae",
+      "email": "danielosae0102@gmail.com",
+      "password": "Danny0102",
+      "id": "mJOK2vYb0rc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

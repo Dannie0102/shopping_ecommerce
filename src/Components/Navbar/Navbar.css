@@ -1,0 +1,139 @@
+/* Navbar.css */
+:root {
+  --brand: #ff5a3c;
+  --brand-dark: #e64526;
+  --text: #2b2b2b;
+  --bg: #ffffff;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 70px;
+  background: var(--bg);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+nav h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--brand);
+  cursor: pointer;
+}
+
+/* Links */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li a {
+  position: relative;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+/* Animated underline on hover */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--brand);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus-visible {
+  color: var(--brand);
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus-visible::after {
+  width: 100%;
+}
+
+/* Keyboard accessibility */
+nav ul li a:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Make the last link (Account) stand out as a button */
+nav ul li:last-child a {
+  padding: 0.55rem 1.2rem;
+  background: var(--brand);
+  color: #fff;
+  border-radius: 999px;
+  transition:
+    background 0.25s ease,
+    transform 0.15s ease;
+}
+
+nav ul li:last-child a::after {
+  display: none;
+}
+
+nav ul li:last-child a:hover {
+  background: var(--brand-dark);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  nav {
+    height: 60px;
+    padding: 0 4%;
+  }
+
+  nav h2 {
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  nav ul li:last-child a {
+    padding: 0.4rem 0.9rem;
+  }
+}
+
+.nav-logout {
+  padding: 0.55rem 1.2rem;
+  font: inherit;
+  font-weight: 500;
+  color: #fff;
+  background: var(--brand);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.nav-logout:hover {
+  background: var(--brand-dark);
+}
